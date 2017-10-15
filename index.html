@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>joke generator</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	function explainThis(){
+		console.log('svdf')
+	}
+</script>
+
+<p>Describe a situation in English in brief. For example "A farmer have buyed new rooster"</p>
+
+<input type="text" id="situation" value="" style="width:50%">
+</input>
+
+
+<p>Write a final phrase in English without quotes. For example "where did all go?"</p>
+
+<input type="text" id="phrase" value="" style="width:50%">
+</input>
+<br><br>
+<button onclick="generate()">generate joke</button>
+
+<p id="result"></p>
+
+<script>
+//http://www.wordgenerator.net/random-sentence-generator.php
+//http://www.springhole.net/writing_roleplaying_randomators/character-obstacles.htm
+function generate() {
+    var situation = document.getElementById("situation").value
+    var phrase = document.getElementById("phrase").value
+    document.getElementById("result").innerHTML = situation + ' and say "' + phrase + '"'
+}
+
+</script>
+
+</body>
+</html>
